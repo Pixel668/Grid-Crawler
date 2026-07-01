@@ -181,3 +181,72 @@ class GridCrawlerEngine:
         m_id = random.choice(zone['spawnable_monster_ids'])
         enemy = spawn_mob_by_id_and_level_scale(m_id, (self.player.level / 5) + 0.5)
         
+        session = CombatSession(self.player, enemy)
+        
+        string_helpers.clear_screen()
+        print(f"\n  [ CRITICAL ALERT: Hostile Entity Manifested ]")
+        print(f"  ID: {enemy.monster_name}")
+        print(f"  \"{self._get_encounter_taunt(enemy.monster_name)}\"")
+        time.sleep(1.0)
+        
+        while True:
+            action = get_player_combat_choice_manual() if manual else "attack"
+            res = session.execute_round(action)
+            
+            if res == "win":
+                story_engine.check_and_show_chapter("level", self.player.level)
+                break
+            elif res == "loss":
+                print("\n  !! FATAL ERROR: Process core destroyed. Game Over. !!")
+                self.game_running = False
+                break
+            elif res == "fled":
+                break
+            elif res != "ongoing":
+                            break
+        
+        self.redraw_ui()
+        
+    def _get_encounter_taunt(self, enemy_name):
+            taunts = [
+            f"The {enemy_name} blocks your logic            f"A violent {enemy_name} emerges from a memory leak.",
+            f"The {enemy_name} is already calculating your demise.",
+            f"You have entered the detection range of a {enemy_name}.",
+            ]
+        return random.choice(taunts)
+        
+    def execute_mock_command_stream(self, commands):
+        # helper for automated tests to run a series of strings.
+        for cmd in commands:
+            if not self.game_running:
+                break
+            self.process_command(cmd, manual=False)
+            
+    def run_interactive_loop(self):
+        story_engine.show_opening_narrative()
+        try:
+            name_input = input("  ENTER PROCESS DESIGNATION: ").strip()
+            if name_input:
+                self.player.name = name_in      except (EOFError, KeyboardInterrupt):
+            pass
+            
+        self.redraw_ui()
+        
+        while self.game_running:
+            try:
+                prompt = f"\n  {self.player.name} @ ({self.player.x_pos},{self.player.y_pos}) > "
+                user_input = input(prompt).lower().strip()
+                if not user_input:
+                    continue
+                self.process_command(user_input, manual=True)
+            except (EOFError, KeyboardInterrupt):
+                break
+                
+if __name__ == "__main__":
+    engine = GridCrawlerEngine()
+    #print("\n  [1] Automated Stability Simulation")
+    #print("  [2] Execute Interactive Session")
+    #mode = input("\n  Selection > ").strip()
+    
+    #if mode == "1":
+    #    engine.run_interactive_loop() # simulation 
