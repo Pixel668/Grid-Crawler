@@ -110,3 +110,28 @@ class GridCrawlerEngine:
             time.sleep(0.8)
             return False
         
+        # update state
+        self.player.change_coordinates(dx, dy)
+        self.player.restore_stamina(10) # walking restores a bit more now
+        
+        # UI update
+        self.redraw_ui(zone_verbose=True)
+        
+        # story / NPC triggers
+        story_engine.check_and_show_chapter("zone", (self.player.x_pos, self.player.y_pos))
+        
+        coords = (self.player.x_pos, self.player.y_pos)
+                if coords in npc_dialogues.npc_encounter_map and coords not in self.npc_talked_zones:
+                        print(f"\n  [ ALERT: Unknown entity detected. Source ID: {npc_dialogues.npc_encounter_map[coords]['npc_name']} ]")
+            print("  [ Action: Type 'talk' to initiate communication. ]")
+        
+        return True
+    
+    def check_current_zone(self, verbose=False):
+        coords = (self.player.x_pos, self.player.y_pos)
+        if coords in world_conf.world_map:
+            zone = world_conf.world_map[coords]
+            string_helpers.print_zone_header(zone['zone_name'], zone['danger_rating'])
+            if verbose:
+                print("\n  [ DESCRIPT                string_helpers.typewriter_print(f"  {zone['entry_announcement']}", speed=0.01)
+           
