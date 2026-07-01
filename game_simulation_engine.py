@@ -249,4 +249,8 @@ if __name__ == "__main__":
     #mode = input("\n  Selection > ").strip()
     
     #if mode == "1":
-    #    engine.run_interactive_loop() # simulation 
+    #    engine.run_interactive_loop() # simulation support is legacy for now
+    #else:
+    # directly starting the interactive session to bypass the dev menu.
+    engine.run_interactive_loop()
+    
