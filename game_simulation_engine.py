@@ -134,4 +134,50 @@ class GridCrawlerEngine:
             string_helpers.print_zone_header(zone['zone_name'], zone['danger_rating'])
             if verbose:
                 print("\n  [ DESCRIPT                string_helpers.typewriter_print(f"  {zone['entry_announcement']}", speed=0.01)
-           
+                if 'lore_e                    print("\n  [ LOG DETAILS ]")
+                    string_helpers.typewriter_print(f"  {zone['lore_entry']}", speed=0.008)
+        else:
+            print("  !! SYSTEM FAULT: Location out of sync. Teleporting to Origin.")
+                        self.player.x_pos = 0
+            self.player.y_pos = 0
+
+    def trigger_npc_encounter(self):
+        coords = (self.player.x_pos, self.player.y_pos)
+        if coords not in npc_dialogues.npc_encounter_map:
+            print("  >> Scanning... No communicative entities found in this sector.")
+            return
+            
+        npc = npc_dialogues.npc_encounter_map[coords]
+        self.npc_talked_zones.add(coords)
+        
+        print(f"\n   {npc['npc_name']} ")
+        for line in npc['lines']:
+            string_helpers.typewriter_print(f" {line}", speed=0.015)
+            time.sleep(0.2)
+        print(f"  ")
+        if npc.get('hint'):
+            print(f"\n  [ ENCRYPTED HINT: {npc['hint']} ]")
+            
+    def print_help_menu(self):
+        print("\n" + "=" * 60)
+        print("  SYSTEM DIRECTIVES (COMMANDS)")
+        print("=" * 60)
+        print("  NAVIGATION:  n (north), s (south), e (east), w (west), map")
+        print("  ACTIONS   :  look, talk, fight, shop")
+        print("  VITALS    :  status, bag, use (heal)")
+        print("  SYSTEM    :  help, quit")
+        print("=" * 60)
+        
+    def _use_item(self):
+        used = self.inventory.use_healing_item()
+        if used:
+            self.player.heal_hp(35)
+        else:
+            print("  !! WARNING: Restoration stock depleted.")
+            
+    def trigger_random_encounter(self, manual=True):
+        coords = (self.player.x_pos, self.player.y_pos)
+        zone = world_conf.world_map[coords]
+        m_id = random.choice(zone['spawnable_monster_ids'])
+        enemy = spawn_mob_by_id_and_level_scale(m_id, (self.player.level / 5) + 0.5)
+        

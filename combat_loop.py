@@ -174,4 +174,20 @@ class CombatSession:
                 "duration": 3,
                 "potency": 4
             })
-            print(f"     Anomalous data detected: {self.player.name} is afflicted by {enemy_move['effect'].upper()}.") 
+            print(f"     Anomalous data detected: {self.player.name} is afflicted by {enemy_move['effect'].upper()}.") {enemy_move['effect'].upper()}.")
+            
+    def check_winner(self):
+        if self.player.hp <= 0:
+            return "loss"
+        if self.enemy.current_hp <= 0:
+            return "win"
+        return "ongoing"
+    
+def get_player_combat_choice_manual():
+    string_helpers.draw_combat_menu(moves_conf.player_move_list)
+    try:
+        raw = input("\n  Sequence ID > ").strip().lower()
+    except (EOFError, KeyboardInterrupt):
+        return "flee"
+    return raw
+
