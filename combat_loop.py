@@ -174,7 +174,7 @@ class CombatSession:
                 "duration": 3,
                 "potency": 4
             })
-            print(f"     Anomalous data detected: {self.player.name} is afflicted by {enemy_move['effect'].upper()}.") {enemy_move['effect'].upper()}.")
+            print(f"     Anomalous data detected: {self.player.name} is afflicted by {enemy_move['effect'].upper()}.")
             
     def check_winner(self):
         if self.player.hp <= 0:

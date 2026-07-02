@@ -12,7 +12,7 @@ OPENING_NARRATIVE = [
     "========================================================================",
     "",
     "Before the memory was cold, there was only the Grida sterile, infinite",
-    ttice of logic and light. Six columns. Seven rows. A coordinate system",
+    "lattice of logic and light. Six columns. Seven rows. A coordinate system",
     "designed to contain the chaos of a nascent universe.",
     "",
     "The ancients called it 'The Origin'. They built their lives around the",
@@ -68,4 +68,54 @@ chapter_markers = {
         "that came before you. The Quantum Glitch God has turned its gaze",
         "toward you, its many eyes flickering like corrupted pixels. The",
         "northern edge of the map is no longer a border; it is a challenge.",
-                "Be carefulthe code is starting to fray where you 
+                "Be carefulthe code is starting to fray where you stand.",
+        ],
+    ("level", 40): [
+        "\n[ CHAPTER V: THE FINAL DIRECTIVE ]",
+        "Forty levels of struggle have transformed you into a titan of the",
+                "lattice. The Warden at (5,6) has felt your approach through the",
+        "system bus. The Final Boss has paused its calculations, waiting for",
+                "your Arrival. The atmosphere is saturated with the scent of ozone",
+        "and imminent termination. This is the endgame.",
+    ],
+    ("level", 50): [
+        "\n[ CHAPTER VI: TRANSCENDENCE ]",
+        "Level fifty. You have reached the ceiling of existence. The Grid",
+        "has nothing left to teach you, yet everything to fear from you.",
+                "The Beginner Meadows are a distant, pixelated memory. You are the",
+        "master of the axes, the surveyor of the void. What lies beyond the",
+        "final calculation is yours to discover.",
+    ],
+    ("zone", (5, 6)): [
+        "\n[ THE TERMINUS: COORDINATE (5,6) ]",
+        "You have reached the edge. The Void Abyss. The colors collapse into",
+                "a singular, crushing blackness. There are no hints here. No guides.",
+        "Just the Final Boss, and the culmination of your journey. The Grid",
+        "holds its breath. The final execution begins now.",
+    ],
+}
+
+shown_chapters = set()
+
+def check_and_show_chapter(trigger_type, value):
+    key = (trigger_type, value)
+    if key in chapter_markers and key not in shown_chapters:
+        shown_chapters.add(key)
+        print("\n" + "*" * 72)
+        for line in chapter_markers[key]:
+            string_helpers.typewriter_print(line, speed=0.015)
+        print("*" * 72)
+        string_helpers.press_enter_to_continue()
+        return True
+    return False
+
+def show_opening_narrative():
+    string_helpers.clear_screen()
+    for line in OPENING_NARRATIVE:
+        if line.strip() == "" or line.startswith("="):
+            print(line)
+        else:
+            string_helpers.typewriter_print(line, speed=0.01)
+            time.sleep(0.1)
+    string_helpers.press_enter_to_continue()
+    

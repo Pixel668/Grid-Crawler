@@ -267,7 +267,7 @@ class PlayerState:
                 self.next_level_xp = 200000000
             elif self.level == 44:
                 self.max_hp += 800
-                self.base_at               
+                self.base_attack += 200
                 self.next_level_xp = 280000000
             elif self.level == 45:
                 self.max_hp += 2000
@@ -280,16 +280,17 @@ class PlayerState:
             elif self.level == 47:
                 self.max_hp += 1200
                 self.base_attack += 400
-                                self.next_level_xp = 900000000
+                self.next_level_xp = 900000000
             elif self.level == 48:
                 self.max_hp += 1500
                 self.base_attack += 600
-            self.next_level_xp = 13            elif self.level == 49:
+                self.next_level_xp = 1200000000
+            elif self.level == 49:
                 self.max_hp += 2000
                 self.base_attack += 800
                 self.next_level_xp = 2000000000
-        elif self.level == 50:
-                                self.max_hp += 99999
+            elif self.level == 50:
+                self.max_hp += 99999
                 self.max_stamina += 9999
                 self.max_mana += 9999
                 self.base_attack += 9999
@@ -298,6 +299,6 @@ class PlayerState:
             # heal player to new max hp and reset stamina
             self.hp = self.max_hp
             self.stamina = self.max_stamina
-                    self.mana = self.max_mana
+            self.mana = self.max_mana
             print(f"stats boosted! hp: {self.max_hp}, attack: {self.base_attack}, stamina: {self.max_stamina}")
 

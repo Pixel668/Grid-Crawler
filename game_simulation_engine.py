@@ -121,8 +121,8 @@ class GridCrawlerEngine:
         story_engine.check_and_show_chapter("zone", (self.player.x_pos, self.player.y_pos))
         
         coords = (self.player.x_pos, self.player.y_pos)
-                if coords in npc_dialogues.npc_encounter_map and coords not in self.npc_talked_zones:
-                        print(f"\n  [ ALERT: Unknown entity detected. Source ID: {npc_dialogues.npc_encounter_map[coords]['npc_name']} ]")
+        if coords in npc_dialogues.npc_encounter_map and coords not in self.npc_talked_zones:
+            print(f"\n  [ ALERT: Unknown entity detected. Source ID: {npc_dialogues.npc_encounter_map[coords]['npc_name']} ]")
             print("  [ Action: Type 'talk' to initiate communication. ]")
         
         return True
@@ -133,12 +133,14 @@ class GridCrawlerEngine:
             zone = world_conf.world_map[coords]
             string_helpers.print_zone_header(zone['zone_name'], zone['danger_rating'])
             if verbose:
-                print("\n  [ DESCRIPT                string_helpers.typewriter_print(f"  {zone['entry_announcement']}", speed=0.01)
-                if 'lore_e                    print("\n  [ LOG DETAILS ]")
+                print("\n  [ DESCRIPTION ]")
+                string_helpers.typewriter_print(f"  {zone['entry_announcement']}", speed=0.01)
+                if 'lore_entry' in zone:
+                    print("\n  [ LOG DETAILS ]")
                     string_helpers.typewriter_print(f"  {zone['lore_entry']}", speed=0.008)
         else:
             print("  !! SYSTEM FAULT: Location out of sync. Teleporting to Origin.")
-                        self.player.x_pos = 0
+            self.player.x_pos = 0
             self.player.y_pos = 0
 
     def trigger_npc_encounter(self):
@@ -203,16 +205,17 @@ class GridCrawlerEngine:
             elif res == "fled":
                 break
             elif res != "ongoing":
-                            break
+                break
         
         self.redraw_ui()
         
     def _get_encounter_taunt(self, enemy_name):
-            taunts = [
-            f"The {enemy_name} blocks your logic            f"A violent {enemy_name} emerges from a memory leak.",
+        taunts = [
+            f"The {enemy_name} blocks your logic.",
+            f"A violent {enemy_name} emerges from a memory leak.",
             f"The {enemy_name} is already calculating your demise.",
             f"You have entered the detection range of a {enemy_name}.",
-            ]
+        ]
         return random.choice(taunts)
         
     def execute_mock_command_stream(self, commands):
@@ -227,7 +230,8 @@ class GridCrawlerEngine:
         try:
             name_input = input("  ENTER PROCESS DESIGNATION: ").strip()
             if name_input:
-                self.player.name = name_in      except (EOFError, KeyboardInterrupt):
+                self.player.name = name_input
+        except (EOFError, KeyboardInterrupt):
             pass
             
         self.redraw_ui()
