@@ -195,4 +195,12 @@ consumables = {
                 'slang_alert_text': "POWER LEVEL OVER 9000! every stat is boosted."
     },
     25: {
-    
+      'id': 25,
+        'item_name': "Midas Touch Paste",
+        'item_type': "buff",
+  'potency_multiplier': 1.5,
+        'cooldown_ticks': 15,
+        'slang_alert_text': "everything u hit turns to loot! cash money."
+    }
+}
+
