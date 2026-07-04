@@ -73,4 +73,42 @@ _troll_moves = [
 
 _wraith_moves = [
     {"name": "Null Touch",      "desc": "Everything you're holding feels like it doesn't exist for a moment.", "dmg_mult": 1.0,  "effect": "stun",    "effect_chance": 0.35},
-    {"name": 
+    {"name": "Pointer Drain",   "desc": "It reaches through you and drains your life force.",                 "dmg_mult": 1.2,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Dereference",     "desc": "Takes a chunk of your soul. Also your stamina.",                     "dmg_mult": 0.9,  "effect": "stun",    "effect_chance": 0.30},
+]
+
+_lag_beast_moves = [
+    {"name": "Timeout Slam",    "desc": "A slow but heavy hit. You couldn't dodge it, it just sat there.",   "dmg_mult": 0.9,  "effect": "stun",    "effect_chance": 0.20},
+    {"name": "Packet Loss",     "desc": "The beast flickers. You miss. It doesn't.",                         "dmg_mult": 1.1,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Lag Spike",       "desc": "Suddenly hits you from three different directions at once.",          "dmg_mult": 1.4,  "effect": None,      "effect_chance": 0.0},
+]
+
+_slime_moves = [
+    {"name": "Acid Splash",     "desc": "A wave of corrosive goop. Burns like crazy.",                       "dmg_mult": 0.8,  "effect": "burn",    "effect_chance": 0.45},
+    {"name": "Engulf",          "desc": "The slime tries to absorb you. Partially succeeds.",                 "dmg_mult": 1.0,  "effect": "poison",  "effect_chance": 0.30},
+    {"name": "Ooze Lunge",      "desc": "Gross. Just... gross.",                                              "dmg_mult": 0.7,  "effect": None,      "effect_chance": 0.0},
+]
+
+_golem_moves = [
+    {"name": "Merge Crush",     "desc": "Slams both massive fists together on your head.",                    "dmg_mult": 1.6,  "effect": "stun",    "effect_chance": 0.30},
+    {"name": "Conflict Roar",   "desc": "A deafening scream that shakes the ground.",                         "dmg_mult": 0.5,  "effect": "stun",    "effect_chance": 0.60},
+    {"name": "Rock Throw",      "desc": "Tears out a chunk of itself and hurls it at you.",                   "dmg_mult": 1.3,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Ground Pound",    "desc": "Absolute devastation. You feel it in your bones.",                   "dmg_mult": 2.0,  "effect": "stun",    "effect_chance": 0.20},
+]
+
+_warrior_moves = [
+    {"name": "Keyboard Frenzy", "desc": "Types extremely fast. Somehow this hurts.",                         "dmg_mult": 1.0,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Flaming Comment", "desc": "Sends you a toxic message. Causes burn damage.",                    "dmg_mult": 0.9,  "effect": "burn",    "effect_chance": 0.40},
+    {"name": "Reply All",       "desc": "Hits everyone in range. Including you, twice.",                      "dmg_mult": 1.2,  "effect": "stun",    "effect_chance": 0.15},
+]
+
+_rat_moves = [
+    {"name": "Nibble",          "desc": "A tiny bite. Embarrassing that it still hurts.",                     "dmg_mult": 0.5,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Diseased Bite",   "desc": "That thing is definitely not clean. Poison chance is real.",        "dmg_mult": 0.7,  "effect": "poison",  "effect_chance": 0.45},
+    {"name": "Swarm Call",      "desc": "Somehow summons more rats from somewhere. Deals bonus damage.",      "dmg_mult": 1.1,  "effect": None,      "effect_chance": 0.0},
+]
+
+_ghost_moves = [
+    {"name": "Haunting Touch",  "desc": "Cold fingers pass through your chest. Very uncomfortable.",          "dmg_mult": 1.1,  "effect": "freeze",  "effect_chance": 0.25},
+    {"name": "Scream",          "desc": "A horrific wail. Deals damage and chance to stun.",                  "dmg_mult": 0.9,  "effect": "stun",    "effect_chance": 0.30},
+    {"name": "Phase Strike",    "desc": "Hits from inside the wall. No 
