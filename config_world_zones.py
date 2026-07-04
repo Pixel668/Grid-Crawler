@@ -150,4 +150,68 @@ world_map = {
     },
     (3, 0): {
         'zone_name': "Summit of the Admin - Ascent",
-        'entry_announcement': "The air grows thin and cold. 
+        'entry_announcement': "The air grows thin and cold. You feel the constant, heavy gaze of an unseen observer monitoring your every register change.",
+        'lore_entry': "This mountain was grafted onto the map during a particularly manic weekend of development. Its slopes are steep because the developer forgot to implement a staircase.",
+        'danger_rating': 7,
+        'spawnable_monster_ids': [16, 17, 19, 20, 21]
+    },
+    (3, 1): {
+        'zone_name': "Summit of the Admin - Overlook",
+                'entry_announcement': "From this height, the entire Grid is visible as a pattern of glowing green lines against a backdrop of absolute nothingness.",
+        'lore_entry': "The View Distance here is set to 'Maximum'. You can see the very edges of the simulation, and the flickering data-shadows of entities that have not yet been spawned.",
+        'danger_rating': 8,
+        'spawnable_monster_ids': [18, 19, 21, 22, 23]
+    },
+    (3, 2): {
+        'zone_name': "The Great Rift - Gorge",
+        'entry_announcement': "A gargantuan fissure in the earth reveals the blue background-color of the cosmos below. The edges of the rift are perfectly sharp and vertical.",
+        'lore_entry': "A permanent scar from the 'Refactor of '21'. The developer attempted to delete a single unused variable and accidentally null-terminated the regional terrain.",
+        'danger_rating': 7,
+        'spawnable_monster_ids': [17, 18, 20, 21, 22]
+    },
+    (3, 3): {
+                'zone_name': "The Great Rift - Suspension Bridge",
+        'entry_announcement': "A narrow bridge of rope and planks sways violently in the wind. Every step is an 'if' statement that might return false.",
+        'lore_entry': "The bridge is held together by three lines of uncommented code and a single 'TODO: Fix this' sticky note. Cross with extreme caution.",
+        'danger_rating': 8,
+        'spawnable_monster_ids': [19, 20, 22, 23, 24]
+    },
+    (3, 4): {
+        'zone_name': "Valley of the 404 - Echo",
+        'entry_announcement': "The terrain flickers in and out of phase. Your compass is spinning wildly, unable to find a stable North in this non-existent space.",
+        valley of unreferenced indices. It is a pocket of space that the system failed to index, making it a natural haven for glitches and outcasts.",
+        'danger_rating': 6,
+        'spawnable_monster_ids': [14, 15, 17, 18, 20]
+    },
+    (3, 5): {
+                'zone_name': "Valley of the 404 - Data Cache",
+        'entry_announcement': "A hidden cave filled with the discarded remnants of previous game versions. You find a pile of 'Congratulations' messages and broken textures.",
+                'lore_entry': "One of the few places where the history of the Grid is preserved. Someone has scrawled 'MADHAV WAS HERE' in 12pt Comic Sans on the far wall. It is truly chilling.",
+        'danger_rating': 7,
+                'spawnable_monster_ids': [16, 17, 19, 20, 22]
+    },
+    (3, 6): {
+        'zone_name': "The Elite Arena - Proving Grounds",
+        'entry_announcement': "Warriors in high-fidelity armor spar with phantoms of the past. The sound of clashing steel and triggered events constant and deafening.",
+        'lore_entry': "The ultimate proving ground for the Grid's warriors. Most of the enemies here were originally designed as player-class archetypes before they were corrupted by greed.",
+        'danger_rating': 9,
+                'spawnable_monster_ids': [20, 21, 23, 24, 25]
+    },
+    (4, 0): {
+        'zone_name': "Wasteland of the Abandoned Assets",
+        'entry_announcement': "Toppled statues of forgotten heroes lie half-buried in the grey dust. Their low-polygon faces are frozen in expressions of permanent confusion.",
+        'lore_entry': "A graveyard of discarded ideas. You can find the original 2D sprites of the Gamer Goblins here, if you are willing to dig through the untextured debris.",
+        'danger_rating': 7,
+        'spawnable_monster_ids': [15, 16, 18, 19, 21]
+    },
+    (4, 1): {
+        'zone_name': "Wasteland of the Abandoned Assets - The Pit",
+        'entry_announcement': "A gargantuan crater filled with the deafening sound of a thousand overlapping 'OOF' sound effects.",
+        'lore_entry': "The system's literal 'Trash Bin'. Anything that is deleted without a confirmation dialog eventually washes into this gravity well.",
+        'danger_rating': 8,
+                'spawnable_monster_ids': [17, 18, 20, 21, 23]
+    },
+    (4, 2): {
+        'zone_name': "The Lag Lagoon - Shallow Bank",
+        'entry_announcement': "The water is thick and viscous, its surface rippling with the colors of unoptimized shaders. Every movement feels sluggish and delayed.",
+        'lore_entry': "The lagoon is the primary source of the system's frame-rate drops. The water is actually a complex series of nested 
