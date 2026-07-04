@@ -111,4 +111,42 @@ _rat_moves = [
 _ghost_moves = [
     {"name": "Haunting Touch",  "desc": "Cold fingers pass through your chest. Very uncomfortable.",          "dmg_mult": 1.1,  "effect": "freeze",  "effect_chance": 0.25},
     {"name": "Scream",          "desc": "A horrific wail. Deals damage and chance to stun.",                  "dmg_mult": 0.9,  "effect": "stun",    "effect_chance": 0.30},
-    {"name": "Phase Strike",    "desc": "Hits from inside the wall. No 
+    {"name": "Phase Strike",    "desc": "Hits from inside the wall. No right way to block it.",               "dmg_mult": 1.3,  "effect": None,      "effect_chance": 0.0},
+        {"name": "Soul Drain",      "desc": "Drains your life into itself. It looks healthier than you.",          "dmg_mult": 1.0,  "effect": None,      "effect_chance": 0.0},
+]
+
+_snake_moves = [
+    {"name": "Constrict",       "desc": "Wraps around you and squeezes. Bleed chance.",                      "dmg_mult": 1.0,  "effect": "bleed",   "effect_chance": 0.35},
+    {"name": "Venom Bite",      "desc": "Sinks fangs deep. The poison is already moving through you.",        "dmg_mult": 0.9,  "effect": "poison",  "effect_chance": 0.65},
+    {"name": "Tail Whip",       "desc": "A fast tail swipe. Hard to dodge.",                                  "dmg_mult": 0.8,  "effect": None,      "effect_chance": 0.0},
+]
+
+_ogre_moves = [
+    {"name": "Feature Add",     "desc": "Adds more weight to an already bloated attack.",                    "dmg_mult": 1.2,  "effect": "stun",    "effect_chance": 0.25},
+    {"name": "Scope Expansion", "desc": "A massive sweeping attack. Hits you from further away than expected.", "dmg_mult": 1.5,  "effect": None,      "effect_chance": 0.0    {"name": "Deadline Panic",  "desc": "Frenzied attacks from nowhere. Multiple hits.",                      "dmg_mult": 1.8,  "effect": "bleed",   "effect_chance": 0.30},
+    {"name": "Backlog Crush",   "desc": "Buries you under accumulated problems. Critical hit chance.",         "dmg_mult": 2.2,  "effect": "stun",    "effect_chance": 0.15},
+]
+
+_lich_moves = [
+    {"name": "Debt Curse",      "desc": "Curses you with decades of technical debt. Feel the poison.",        "dmg_mult": 1.0,  "effect": "poison",  "effect_chance": 0.70},
+    {"name": "Undocumented Method", "desc": "Attacks from an unknown function. You cannot predict the damage.", "dmg_mult": 1.6,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Deprecated Drain", "desc": "Pulls your life force. Draining.",                                  "dmg_mult": 1.2,  "effect": "bleed",   "effect_chance": 0.40},
+    {"name": "Memory Haunt",    "desc": "Fills ur head with corrupted memories. Stuns.",                     "dmg_mult": 0.8,  "effect": "stun",    "effect_chance": 0.50},
+]
+
+_hell_hound_moves = [
+    {"name": "Dependency Bite", "desc": "Bites through every layer of your armor.",                          "dmg_mult": 1.1,  "effect": "bleed",   "effect_chance": 0.35},
+    {"name": "Conflict Howl",   "desc": "A howl that causes the ground to fracture beneath you.",            "dmg_mult": 0.9,  "effect": "stun",    "effect_chance": 0.30},
+    {"name": "Package Install", "desc": "Summons more hounds. Deals bonus damage for each one.",             "dmg_mult": 1.4,  "effect": None,      "effect_chance": 0.0},
+]
+
+_bat_moves = [
+    {"name": "Buffer Bite",     "desc": "Fangs overflow your buffer. Memory corruption detected.",           "dmg_mult": 0.8,  "effect": "poison",  "effect_chance": 0.30},
+    {"name": "Wing Slash",      "desc": "Razor wing cuts across your arm.",                                   "dmg_mult": 0.9,  "effect": "bleed",   "effect_chance": 0.25},
+    {"name": "Echolocation Pulse", "desc": "A concentrated beam of sound. Your ears are ringing.",           "dmg_mult": 0.7,  "effect": "stun",    "effect_chance": 0.20},
+]
+
+_specter_moves = [
+    {"name": "Stack Peek",      "desc": "Looks through you like you're a debugger window.",                  "dmg_mult": 1.0,  "effect": "stun",    "effect_chance": 0.25},
+    {"name": "Trace Strike",    "desc": "Follows every movement precisely. Hard to avoid.",                  "dmg_mult": 1.2,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Error Propagation", "desc": "Sends cascading damage through your whole body.",                 
