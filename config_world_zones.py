@@ -214,4 +214,60 @@ world_map = {
     (4, 2): {
         'zone_name': "The Lag Lagoon - Shallow Bank",
         'entry_announcement': "The water is thick and viscous, its surface rippling with the colors of unoptimized shaders. Every movement feels sluggish and delayed.",
-        'lore_entry': "The lagoon is the primary source of the system's frame-rate drops. The water is actually a complex series of nested 
+        'lore_entry': "The lagoon is the primary source of the system's frame-rate drops. The water is actually a complex series of nested 'for' loops that never quite finishes calculating.",
+        'danger_rating': 8,
+        'spawnable_monster_ids': [18, 19, 21, 22, 24]
+    },
+    (4, 3): {
+        'zone_name': "The Lag Lagoon - Central Isle",
+        'entry_announcement': "The latency here is terminal. You occasionally find yourself standing in a location you occupied five seconds ago. The world is out of sync.",
+        'lore_entry': "Home to the Packet Loss Pirates. They are not interested in your gold; they only seek to steal your inputs and replace them with static.",
+                'danger_rating': 9,
+        'spawnable_monster_ids': [20, 21, 23, 24, 26]
+    },
+    (4, 4): {
+        'zone_name': "Data Breach Beach - Gritty Shore",
+        'entry_announcement': "The tide washes up long strings of encrypted characters and the occasional plain-text password. The sand is composed of leaked JSON objects.",
+        'lore_entry': "A highly insecure sector. The beach was formed during the Great Leak of '18, and has remained a source of systemic vulnerability ever since.",
+        'danger_rating': 7,
+        'spawnable_monster_ids': [16, 17, 19, 20, 22]
+    },
+    (4, 5): {
+        'zone_name': "Data Breach Beach - Pier of Insecurity",
+        'entry_announcement': "A rickety wooden pier stretches out into a sea of liquid firewalls. The light of a distant, flickering database shines through the mist.",
+                'lore_entry': "Fishers here aren't looking for sustenance; they are searching for the elusive 'SQL Injection'. It is a dangerous and often illegal profession.",
+        'danger_rating': 8,
+        'spawnable_monster_ids': [18, 19, 21, 22, 24]
+    },
+    (4, 6): {
+        'zone_name': "The Omega Outpost - Final Stand",
+        'entry_announcement': "A fortress of pure obsidian code towers against the darkness. The air hums with the immense power of a final, production-ready build.",
+        bastion of human-written code before the Void Abyss begins. It is manned by the veteran warriors who survived the first two quadrants.",
+        'danger_rating': 9,
+        'spawnable_monster_ids': [22, 23, 25, 26, 27]
+    },
+    (5, 0): {
+        'zone_name': "The Void Abyss - Precipice",
+        'entry_announcement': "Reality is fraying. The colors of the world are being sucked into a single point of absolute, non-reflective blackness.",
+                'lore_entry': "The absolute edge of the map. Beyond this point, the 'Undo' button has been disabled, and the concept of 'Previous Version' no longer exist.",
+        'danger_rating': 9,
+        'spawnable_monster_ids': [23, 24, 26, 27, 28]
+    },
+    (5, 1): {
+        'zone_name': "The Void Abyss - Dark Path",
+        'entry_announcement': "Total, absolute darkness. You can only feel the faint vibrations of the underlying hardware beneath your feet.",
+        'lore_entry': "They say if you stare into the dark path long enough, it starts staring backand then it asks you to review its pull-request.",
+        'danger_rating': 10,
+        'spawnable_monster_ids': [24, 25, 27, 28, 29]
+    },
+    (5, 2): {
+        'zone_name': "The Void Abyss - Infinite Fall",
+        'entry_announcement': "Gravity has been disabled. You are floating through a sea of uninitialized variables and orphaned pointers. There is no North here.",
+                'lore_entry': "A common glitch that the developer rebranded as a feature. It is effectively an infinite loop that provides the illusion of movement without any state-change.",
+        'danger_rating': 10,
+        'spawnable_monster_ids': [25, 26, 28, 29, 30]
+    },
+    (5, 3): {
+        'zone_name': "The Void Abyss - The Core",
+        'entry_announcement': "The sound of a million simultaneous parallel processes echoes through the void. You are at the absolute center of the Grid's consciousness.",
+     
