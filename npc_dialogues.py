@@ -69,4 +69,44 @@ npc_encounter_map = {
         "npc_name": "Bron, the Retired Admin",
         "lines": [
             "You have that lookthe expression of one who has finally mapped the grid",
-            "only to realize how 
+            "only to realize how small the drawing truly is.",
+            "I once faced the Deadlock Dragon with a kernel-patch and a prayer. I lost.",
+            "The second time, I possessed maxed defense and a heart full of rage. I triumphed.",
+            "The secret to the dragon: do not panic when it freezes your thread. Wait.",
+        ],
+                "hint": "ADVICE: Use 'Freezing Shock' to interrupt the dragon's most devastating loops."
+    },
+    (3, 3): {
+        "npc_name": "The Prophet of the Axis",
+        "lines": [
+            "You stand at the Nexus. The center of all things (x) and (y).",
+            "Four corners. Four elemental corruptions. They grow stronger as you know them.",
+            "Ice in the north, fire in the south, ruin in the east, and something in the",
+            "west that the developer chose to never define. Avoid coordinate (5,6).",
+            "It is the Terminus. The beginning of the end.",
+        ],
+        "hint": "ADVICE: Zone (5,6) is the Void Abyss. It is recommended only for the level 50 elite."
+    },
+    (4, 5): {
+                "npc_name": "The Entity 404",
+        "lines": [
+          "SYSTEM ERROR. SCANNING... SCAN COMPLETE. Greetings, User.",
+            "My presence here is a violation of the current map-schema. I migrated",
+                        "from an unallocated block when the developer forgot to define (4,4).",
+            "I possess assembly-level knowledge. The Quantum Glitch God is not a bug",
+            "it is a feature that was never meant to be enabled. It is already aware of you.",
+        ],
+        "hint": "ADVICE: The Quantum Glitch God at (5,5) is a supreme threat. Prepare your healing."
+    },
+    (5, 6): {
+        "npc_name": "THE FINAL WARDEN",
+        "lines": [
+            "The simulation ends here.",
+            "You have navigated the lattice with unexpected efficiency.",
+            "The gate beyond leads to the Final Boss. Your thread of existence",
+            "is nearing its termination point. Are you prepared to execute?",
+        ],
+        "hint": "WARNING: This is the endgame. Ensure your attributes are maxed before entry."
+    },
+}
+

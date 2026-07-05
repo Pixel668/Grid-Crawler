@@ -121,4 +121,16 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
             elif effect_type == 'defending':
             # this is set by the Defend move. just a flag, doesn't do anything here.
             # the take_damage method reads is_defending directly.
+            entity_object.active_debuff_list.pop(i)
             
+        else:
+            print(f"  [??] weird status effect detected on {entity_name}: '{effect_type}'. ignoring.")
+            entity_object.active_debuff_list.pop(i)
+            
+    print(f"  [status] check complete for {entity_name}.")
+    
+# technical notes:
+# 1. check if doom countdown is too fast for bosses.
+# 2. freeze shatter dmg might need a nerf.
+# 3. TODO: use classes for effects instead of dicts.
+
