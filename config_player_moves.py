@@ -86,4 +86,61 @@ player_move_list = {
     8: {
         "name": "Burning Palm",
         "key": "burning palm",
-        "desc": "You channel some weird heat into ur 
+        "desc": "You channel some weird heat into ur hand and slap them. Fire damage over time.",
+        "dmg_mult": 0.9,
+        "acc_mod": 0.0,
+        "stamina_cost": 18,
+        "effect": "burn",
+        "effect_chance": 0.55
+    },
+    9: {
+        "name": "Poison Jab",
+        "key": "poison jab",
+        "desc": "You had a poison dart. Don't ask where it came from. Low hit dmg, high dot.",
+        "dmg_mult": 0.6,
+        "acc_mod": 0.03,
+        "stamina_cost": 12,
+        "effect": "poison",
+        "effect_chance": 0.70
+    },
+    10: {
+        "name": "Freezing Shock",
+        "key": "freezing shock",
+                "desc": "You throw something icy at them and they seize up. Might freeze them solid.",
+        "dmg_mult": 1.0,
+        "acc_mod": -0.05,
+        "stamina_cost": 22,
+        "effect": "freeze",
+        "effect_chance": 0.40
+    },
+    11: {
+        "name": "Rage Burst",
+        "key": "rage burst",
+                "desc": "You get so mad ur attack goes through the roof for a turn. Stamina drains fast.",
+        "dmg_mult": 1.3,
+        "acc_mod": 0.0,
+        "stamina_cost": 30,
+        "effect": "rage",
+        "effect_chance": 1.0
+    },
+    12: {
+        "name": "Defend",
+        "key": "defend",
+        "desc": "You brace for impact. Skip your attack this turn, take less damage from the next hit.",
+        "dmg_mult": 0.0,
+        "acc_mod": 0.0,
+        "stamina_cost": 0,
+        "effect": "defending",
+        "effect_chance": 1.0
+    },
+}
+
+# helper dictionary to map move names or keys back to their ID.
+move_name_to_id = {}
+for mid, mdata in player_move_list.items(    move_name_to_id[mdata["name"].lower()] = mid
+    move_name_to_id[mdata["key"].lower()] = mid
+    
+# also map by number string because player might type "1" instead of move name
+for i in range(1, 13):
+    move_name_to_id[str(i)] = i
+    

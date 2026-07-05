@@ -149,4 +149,74 @@ _bat_moves = [
 _specter_moves = [
     {"name": "Stack Peek",      "desc": "Looks through you like you're a debugger window.",                  "dmg_mult": 1.0,  "effect": "stun",    "effect_chance": 0.25},
     {"name": "Trace Strike",    "desc": "Follows every movement precisely. Hard to avoid.",                  "dmg_mult": 1.2,  "effect": None,      "effect_chance": 0.0},
-    {"name": "Error Propagation", "desc": "Sends cascading damage through your whole body.",                 
+    {"name": "Error Propagation", "desc": "Sends cascading damage through your whole body.",                 "dmg_mult": 1.5,  "effect": "bleed",   "effect_chance": 0.20},
+]
+
+_rhino_moves = [
+    {"name": "Runtime Charge",  "desc": "Runs at full speed directly into you.",                             "dmg_mult": 1.8,  "effect": "stun",    "effect_chance": 0.40},
+    {"name": "Exception Throw", "desc": "Throws you like an uncaught exception.",                            "dmg_mult": 1.4,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Stack Corrupt",   "desc": "Corrupts your thinking. Burns your mind.",                          "dmg_mult": 1.1,  "effect": "burn",    "effect_chance": 0.35},
+    {"name": "System Crash",    "desc": "The ultimate move. The world goes black for a moment.",             "dmg_mult": 2.5,  "effect": "stun",    "effect_chance": 0.30},
+]
+
+_ivy_moves = [
+    {"name": "Creeping Loop",   "desc": "A slow coil of plant matter. Traps you in place.",                 "dmg_mult": 0.6,  "effect": "stun",    "effect_chance": 0.50},
+    {"name": "Throttle",        "desc": "Constricts airflow. Takes the breath from you.",                   "dmg_mult": 0.8,  "effect": "bleed",   "effect_chance": 0.30},
+    {"name": "Endless Growth",  "desc": "Keeps attacking. It's infinite. It doesn't stop.",                  "dmg_mult": 0.5,  "effect": None,      "effect_chance": 0.0},
+]
+
+_mosquito_moves = [
+    {"name": "Tiny Bite",       "desc": "It is so small. But it found a vein.",                             "dmg_mult": 0.4,  "effect": "bleed",   "effect_chance": 0.60},
+    {"name": "Irritate",        "desc": "Just... existing near you. The psychic damage is real.",            "dmg_mult": 0.3,  "effect": "stun",    "effect_chance": 0.10},
+    {"name": "Malaria Attempt", "desc": "High risk, low damage. Still a nightmare.",                         "dmg_mult": 0.5,  "effect": "poison",  "effect_chance": 0.55},
+]
+
+_shark_moves = [
+    {"name": "Seg Fault Jaw",   "desc": "Bites into memory that doesn't belong to you.",                    "dmg_mult": 2.0,  "effect": "bleed",   "effect_chance": 0.50},
+    {"name": "Core Dump",       "desc": "Dumps the full contents of your health bar.",                      "dmg_mult": 1.5,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Ocean Crash",     "desc": "A massive slam. The water hits harder than the shark.",             "dmg_mult": 1.8,  "effect": "stun",    "effect_chance": 0.30},
+    {"name": "Feral Frenzy",    "desc": "Blood in the water. It goes completely berserk.",                  "dmg_mult": 2.5,  "effect": "bleed",   "effect_chance": 0.60},
+]
+
+_harpy_moves = [
+    {"name": "Hardcoded Strike", "desc": "A predetermined path. Nothing can change it.",                    "dmg_mult": 1.2,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Static Shriek",   "desc": "A scream at a constant frequency. Burning ears.",                  "dmg_mult": 0.9,  "effect": "burn",    "effect_chance": 0.40},
+    {"name": "Immutable Slash", "desc": "You can't stop it once it starts. Bleed guaranteed.",              "dmg_mult": 1.1,  "effect": "bleed",   "effect_chance": 0.55},
+]
+
+_serpent_moves = [
+    {"name": "Spaghetti Strike", "desc": "A completely tangled attack. Somehow hits everywhere.",           "dmg_mult": 1.0,  "effect": "bleed",   "effect_chance": 0.40},
+    {"name": "Convoluted Coil", "desc": "A complex attack pattern nobody can follow.",                      "dmg_mult": 1.3,  "effect": "stun",    "effect_chance": 0.20},
+    {"name": "Refactor Fang",   "desc": "Tears through your defenses methodically.",                        "dmg_mult": 1.5,  "effect": "poison",  "effect_chance": 0.45},
+    {"name": "Death by Complexity", "desc": "An attack so convoluted it deals bonus damage every time.",    "dmg_mult": 2.0,  "effect": "bleed",   "effect_chance": 0.50},
+]
+
+_dragon_moves = [
+    {"name": "Deadlock Breath", "desc": "A beam that locks everything in place. Freeze is almost certain.", "dmg_mult": 1.5,  "effect": "freeze",  "effect_chance": 0.70},
+    {"name": "Thread Crush",    "desc": "Crushes your thread of consciousness. Heavy stun.",               "dmg_mult": 1.8,  "effect": "stun",    "effect_chance": 0.45},
+    {"name": "Infinite Wait",   "desc": "A bind that grows tighter every second. Bleed.",                  "dmg_mult": 1.2,  "effect": "bleed",   "effect_chance": 0.50},
+    {"name": "DRAGON TAIL",     "desc": "An earth-splitting tail slam. You see stars. Lots of them.",       "dmg_mult": 2.8,  "effect": "stun",    "effect_chance": 0.35},
+    {"name": "Deadlock State",  "desc": "Freezes everything. The environment. Time. You.",                  "dmg_mult": 2.0,  "effect": "freeze",  "effect_chance": 0.90},
+]
+
+_raptor_moves = [
+    {"name": "Recursion Bite",  "desc": "Bites. Then bites again inside the bite.",                        "dmg_mult": 1.1,  "effect": "bleed",   "effect_chance": 0.35},
+    {"name": "Stack Deepen",    "desc": "Digs deeper. More damage with each stack.",                       "dmg_mult": 1.3,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Base Case Fail",  "desc": "Destroys its own logic and attacks anyway. Huge damage.",          "dmg_mult": 2.0,  "effect": "stun",    "effect_chance": 0.25},
+]
+
+_falcon_moves = [
+    {"name": "Firewall Dive",   "desc": "Slams through all your defenses.",                                "dmg_mult": 1.3,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Intrusion Scan",  "desc": "Checks every weakness and hits the worst one.",                   "dmg_mult": 1.0,  "effect": "burn",    "effect_chance": 0.35},
+    {"name": "Blocked Packet",  "desc": "Intercepts your action and punishes you for it.",                 "dmg_mult": 0.8,  "effect": "stun",    "effect_chance": 0.30},
+]
+
+_mammoth_moves = [
+    {"name": "Malware Stomp",   "desc": "Corrupts the ground itself. Massive area damage.",                "dmg_mult": 2.0,  "effect": "stun",    "effect_chance": 0.30},
+    {"name": "Payload Drop",    "desc": "Drops something heavy on you. You don't know what it was.",       "dmg_mult": 1.8,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Rootkit Charge",  "desc": "Goes deep. Very deep. Hard to block.",                            "dmg_mult": 1.5,  "effect": "bleed",   "effect_chance": 0.40},
+    {"name": "System Overwrite", "desc": "Overwrites your HP register directly. Takes a big chunk.",       "dmg_mult": 2.5,  "effect": "burn",    "effect_chance": 0.35},
+]
+
+_toad_moves = [
+    {"name": "Payload Croak",   "desc": "Croaks malware directly into your face.",          

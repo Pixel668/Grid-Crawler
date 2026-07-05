@@ -270,4 +270,29 @@ world_map = {
     (5, 3): {
         'zone_name': "The Void Abyss - The Core",
         'entry_announcement': "The sound of a million simultaneous parallel processes echoes through the void. You are at the absolute center of the Grid's consciousness.",
-     
+        'lore_entry': "This is where the first line of code were written. It is a chaotic mess of 'Hello World' prints, commented-out debugger statements, and ancient, unoptimized math.",
+        'danger_rating': 10,
+        'spawnable_monster_ids': [27, 28, 30, 31, 32]
+        (5, 4): {
+        'zone_name': "The Architect's Basement",
+                'entry_announcement': "You find yourself in a room filled with empty energy drink cans and pizza boxes from three different development cycles.",
+        'lore_entry': "The 'Easter Egg' zone. It is a 3D scan of the room where this world was synthesized. The lighting is remarkably poor and there is a distinct lack of proper ventilation.",
+        'danger_rating': 10,
+        'spawnable_monster_ids': [28, 29, 32, 33, 34]
+        },
+    (5, 5): {
+        'zone_name': "The Final Compile - Execution",
+        'entry_announcement': "Pillars of scrolling code form a cathedral of logic around you. The entire world is being reassembled in real-time as you watch.",
+        'lore_entry': "The ultimate test of system stability. If you fight here, you are challenging the very engine that governs your existence. There is no safety net.",
+        'danger_rating': 10,
+        'spawnable_monster_ids': [30, 31, 33, 34, 35]
+    },
+    (5, 6): {
+        'zone_name': "THE TERMINUS - END OF THE GRID",
+                'entry_announcement': "You stand at (5,6). The final coordinate. The grid has been traversed. You are no longer a process; you are the Master of the Lattice.",
+        'lore_entry': "There is nothing left to explore. You have conquered every axis and resolved every conflict. The Grid is silent. The journey is complete.",
+        'danger_rating': 10,
+        'spawnable_monster_ids': [35, 35, 35, 35, 35]
+    }
+}
+
