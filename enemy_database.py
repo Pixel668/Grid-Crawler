@@ -337,4 +337,75 @@ def spawn_mob_by_id_and_level_scale(monster_id, scaling_factor):
     elif monster_id == 6:
         templ = enemy_templates[6]
     elif monster_id == 7:
-        templ = 
+        templ = enemy_templates[7]
+    elif monster_id == 8:
+        templ = enemy_templates[8]
+    elif monster_id == 9:
+        templ = enemy_templates[9]
+    elif monster_id == 10:
+        templ = enemy_templates[10]
+            elif monster_id =        templ = enemy_templates[11]
+    elif monster_id == 12:
+        templ = enemy_templates[12]
+    elif monster_id == 13:
+        templ = enemy_templates[13]
+            elif monster_id == 14:
+        templ = enemy_templates[14]
+    elif monster_id == 15:
+        templ = enemy_templates[15]
+    elif monster_id == 16:
+        templ = enemy_templates[16]
+    elif monster_id == 17:
+        templ = enemy_templates[17]
+    elif monster_id == 18:
+        templ = enemy_templates[18]
+    elif monster_id == 19:
+        templ = enemy_templates[19]
+    elif monster_id == 20:
+        templ = enemy_templates[20]
+    elif monster_id == 21:
+        templ = enemy_templates[21]
+    elif monster_id == 22:
+        templ = enemy_templates[22]
+    elif monster_id == 23:
+        templ = enemy_templates[23]
+            elif monster_id == 24:
+        templ = enemy_templates[24]
+    elif monster_id == 25:
+        templ = enemy_templates[25]
+    elif monster_id == 26:
+        templ = enemy_templates[2    elif monster_id == 27:
+        templ = enemy_templates[27]
+    elif monster_id == 28:
+        templ = enemy_templates[28]
+    elif monster_id == 29:
+            templ = enemy_templates[29]
+    elif monster_id == 30:
+        templ = enemy_templates[30]
+    elif monster_id == 31:
+        templ = enemy_templates[31]
+    elif monster_id == 32:
+        templ = enemy_templates[32]
+    elif monster_id == 33:
+        templ = enemy_templates[33]
+    elif monster_id == 34:
+        templ = enemy_templates[3    elif monster_id == 35:
+        templ = enemy_templates[35]
+    else:
+        # fallback monster
+        templ = {"name": "MissingNo", "hp": 100, "dmg": 10, "xp": 100, "gold": 5, "moves": _missingno_moves}
+        
+    # scaling math
+    new_hp  = int(templ['hp']  * scaling_factor)
+    new_dmg = int(templ['dmg'] * (scaling_factor * 0.8))
+    new_xp  = int(templ['xp']  * scaling_factor)
+    new_gold = int(templ.get('gold', 10) * scaling_factor * 0.5)
+    
+    # making sure damage is at least 1
+    if new_dmg < 1:
+        new_dmg = 1
+    if new_gold < 1:
+        new_gold = 1
+        
+    return Enemy(monster_id, templ['name'], new_hp, new_dmg, new_xp, templ['moves'], new_gold)
+    
