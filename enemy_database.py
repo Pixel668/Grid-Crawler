@@ -286,4 +286,55 @@ enemy_templates = {
     1:  {"name": "Gamer Goblin",              "hp": 20,    "dmg": 5,    "xp": 50,     "gold": 5,    "moves": _goblin_moves},
     2:  {"name": "Small Spider",              "hp": 25,    "dmg": 8,    "xp": 75,     "gold": 8,    "moves": _spider_moves},
     3:  {"name": "Compiler Troll",            "hp": 40,    "dmg": 12,   "xp": 120,    "gold": 12,   "moves": _troll_moves},
-    4:  {"name": "NullPointer 
+    4:  {"name": "NullPointer Wraith",        "hp": 30,    "dmg": 15,   "xp": 150,    "gold": 15,   "moves": _wraith_moves},
+    5:  {"name": "Lag Beast",                 "hp": 60,    "dmg": 10,   "xp": 200,    "gold": 18,   "moves": _lag_beast_moves},
+    6:  {"name": "Syntax Slime",              "hp": 22,    "dmg": 6,    "xp": 60,     "gold": 7,    "moves": _slime_moves},
+    7:  {"name": "Merge Conflict Golem",      "hp": 100,   "dmg": 20,   "xp": 500,    "gold": 45,   "moves": _golem_moves},
+        8:  {"name": "Keyboard Warrior",          "hp": 35,    "dmg": 12,   "xp": 100,    "gold": 12,   "moves": _warrior_moves},
+    9:  {"name": "Annoying Rat",              "hp": 15,    "dmg": 4,    "xp": 30,     "gold": 3,    "moves": _rat_moves},
+    10: {"name": "Git Ghost",                 "hp": 50,    "dmg": 18,   "xp": 250,    "gold": 22,   "moves": _ghost_moves},
+    11: {"name": "Beta Tester Snake",         "hp": 45,    "dmg": 14,   "xp": 180,    "gold": 16,   "moves": _snake_moves},
+    12: {"name": "Feature Creep Ogre",        "hp": 150,   "dmg": 25,   "xp": 750,    "gold": 65,   "moves": _ogre_moves},
+    13: {"name": "Legacy Code Lich",          "hp": 120,   "dmg": 30,   "xp": 1000,   "gold": 90,   "moves": _lich_moves},
+    14: {"name": "Dependency Hell Hound",     "hp": 80,    "dmg": 22,   "xp": 400,    "gold": 35,   "moves": _hell_hound_moves},
+    15: {"name": "Buffer Overflow Bat",       "hp": 28,    "dmg": 10,   "xp": 90,     "gold": 10,   "moves": _bat_moves},
+        16: {"name": "Stack Trace Specter",       "hp": 55,    "dmg": 16,   "xp": 300,    "gold": 25,   "moves": _specter_moves},
+    17: {"name": "Runtime Error Rhino",       "hp": 200,   "dmg": 40,   "xp": 1500,   "gold": 120,  "moves": _rhino_moves},
+    18: {"name": "Infinite Loop Ivy",         "hp": 90,    "dmg": 5,    "xp": 350,    "gold": 30,   "moves": _ivy_moves},
+    19: {"name": "Memory Leak Mosquito",      "hp": 12,    "dmg": 2,    "xp": 40,     "gold": 4,    "moves": _mosquito_moves},
+    20: {"name": "Segmentation Fault Shark",  "hp": 300,   "dmg": 60,   "xp": 2500,   "gold": 200,  "moves": _shark_moves},
+    21: {"name": "Hardcode Harpy",            "hp": 70,    "dmg": 24,   "xp": 600,    "gold": 55,   "moves": _harpy_moves},
+    22: {"name": "Spaghetti Code Serpent",    "hp": 110,   "dmg": 28,   "xp": 800,    "gold": 70,   "moves": _serpent_moves},
+    23: {"name": "Deadlock Dragon",           "hp": 500,   "dmg": 100,  "xp": 5000,   "gold": 500,  "moves": _dragon_moves},
+        24: {"name": "Recursive Raptor",          "hp": 140,   "dmg": 35,   "xp": 1200,   "gold": 100,  "moves": _raptor_moves},
+    25: {"name": "Firewall Falcon",           "hp": 85,    "dmg": 26,   "xp": 700,    "gold": 60,   "moves": _falcon_moves},
+    26: {"name": "Malware Mammoth",           "hp": 400,   "dmg": 80,   "xp": 4000,   "gold": 350,  "moves": _mammoth_moves},
+    27: {"name": "Trojan Toad",               "hp": 45,    "dmg": 15,   "xp": 220,    "gold": 20,   "moves": _toad_moves},
+    28: {"name": "Phishing Piranha",          "hp": 35,    "dmg": 50,   "xp": 500,    "gold": 45,   "moves": _piranha_moves},
+    29: {"name": "Encrypted Elephant",        "hp": 600,   "dmg": 30,   "xp": 3000,   "gold": 280,  "moves": _elephant_moves},
+    30: {"name": "Quantum Glitch God",        "hp": 2000,  "dmg": 250,  "xp": 20000,  "gold": 2000, "moves": _quantum_moves},
+        31: {"name": "The Final Boss",            "hp": 5000,  "dmg": 500,  "xp": 50000,  "gold": 5000, "moves": _final_boss_moves},
+    32: {"name": "Unpaid Intern Shadow",      "hp": 100,   "dmg": 5,    "xp": 200,    "gold": 2,    "moves": _intern_moves},
+    33: {"name": "Project Manager Minotaur",  "hp": 800,   "dmg": 70,   "xp": 4500,   "gold": 400,  "moves": _minotaur_moves},
+    34: {"name": "Senior Dev Sentry",         "hp": 1500,  "dmg": 150,  "xp": 10000,  "gold": 900,  "moves": _sentry_moves},
+    35: {"name": "THE REALITY COLLAPSER",     "hp": 99999, "dmg": 9999, "xp": 999999, "gold": 9999, "moves": _collapser_moves},
+}
+
+def spawn_mob_by_id_and_level_scale(monster_id, scaling_factor):
+    # this function is a bit messy but scaling is important.
+    # scaling factor is usually player_level / 5 + 1.
+    
+    if monster_id == 1:
+        templ = enemy_templates[1]
+    elif monster_id == 2:
+        templ = enemy_templates[2]
+    elif monster_id == 3:
+        templ = enemy_templates[3]
+    elif monster_id == 4:
+        templ = enemy_templates[4]
+    elif monster_id == 5:
+        templ = enemy_templates[5]
+    elif monster_id == 6:
+        templ = enemy_templates[6]
+    elif monster_id == 7:
+        templ = 
