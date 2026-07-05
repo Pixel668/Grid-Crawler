@@ -9,7 +9,8 @@ world_map = {
         'lore_entry': "This is the Genesis Coordinatethe point from which all existence in the Grid is derived. It is said that the first iteration of life began here as a simple 'Hello World' broadcast into the void.",
         'danger_rating': 1,
         'spawnable_monster_ids': [1, 1, 2, 3, 4]
-        (0, 1): {
+    },
+    (0, 1): {
         'zone_name': "The Origin Meadows - North",
         'entry_announcement': "The rolling hills continue toward the horizon, punctuated by clusters of binary wildflowers that flicker with a soft, neon glow.",
                 'lore_entry': "Gamer Goblins often migrate through these northlands, preying on nascent processes. The soil here is rich with the discarded data-packets of those who failed to navigate the first axis.",
@@ -53,7 +54,7 @@ world_map = {
     },
     (1, 0): {
         'zone_name': "The Muddy Swamp - Western Reach",
-        thick with the scent of stagnant data and decaying logic. Every step into the dark slurry results in a wet, heavy suction.",
+        'entry_announcement': "thick with the scent of stagnant data and decaying logic. Every step into the dark slurry results in a wet, heavy suction.",
         'lore_entry': "The Swamp was formed when a gargantuan database overflow saturated the lower sectors. The muck is composed of millions of unindexed records, forever trapped in a state of slow decay.",
         'danger_rating': 3,
         'spawnable_monster_ids': [4, 5, 7, 8, 9]
@@ -97,7 +98,8 @@ world_map = {
         'zone_name': "The Crystal River - Arched Bridge",
                 'entry_announcement': "A stone bridge, carved with intricate geometric patterns, spans the rushing data. Its surface is worn smooth by the passage of a million previous iterations.",
                         'lore_entry': "The bridge is a marvel of ancient engineering. It remains one of the few structures that has survived every major system refactor since the Second Epoch.",
-        'danger_rating        'spawnable_monster_ids': [11, 12, 14, 15, 16]
+        'danger_rating': 5,
+        'spawnable_monster_ids': [11, 12, 14, 15, 16]
     },
     (2, 0): {
         'zone_name': "The Glitch Dungeon - Fractured Entry",
@@ -179,7 +181,7 @@ world_map = {
     (3, 4): {
         'zone_name': "Valley of the 404 - Echo",
         'entry_announcement': "The terrain flickers in and out of phase. Your compass is spinning wildly, unable to find a stable North in this non-existent space.",
-        valley of unreferenced indices. It is a pocket of space that the system failed to index, making it a natural haven for glitches and outcasts.",
+        'lore_entry': "valley of unreferenced indices. It is a pocket of space that the system failed to index, making it a natural haven for glitches and outcasts.",
         'danger_rating': 6,
         'spawnable_monster_ids': [14, 15, 17, 18, 20]
     },
@@ -242,7 +244,7 @@ world_map = {
     (4, 6): {
         'zone_name': "The Omega Outpost - Final Stand",
         'entry_announcement': "A fortress of pure obsidian code towers against the darkness. The air hums with the immense power of a final, production-ready build.",
-        bastion of human-written code before the Void Abyss begins. It is manned by the veteran warriors who survived the first two quadrants.",
+        'lore_entry': "bastion of human-written code before the Void Abyss begins. It is manned by the veteran warriors who survived the first two quadrants.",
         'danger_rating': 9,
         'spawnable_monster_ids': [22, 23, 25, 26, 27]
     },
@@ -273,7 +275,8 @@ world_map = {
         'lore_entry': "This is where the first line of code were written. It is a chaotic mess of 'Hello World' prints, commented-out debugger statements, and ancient, unoptimized math.",
         'danger_rating': 10,
         'spawnable_monster_ids': [27, 28, 30, 31, 32]
-        (5, 4): {
+    },
+    (5, 4): {
         'zone_name': "The Architect's Basement",
                 'entry_announcement': "You find yourself in a room filled with empty energy drink cans and pizza boxes from three different development cycles.",
         'lore_entry': "The 'Easter Egg' zone. It is a 3D scan of the room where this world was synthesized. The lighting is remarkably poor and there is a distinct lack of proper ventilation.",

@@ -172,7 +172,8 @@ consumables = {
         'slang_alert_text': "death delayed! doom status is cleared."
     },
     22: {
-        'id'        'item_name': "Stamina Cookie",
+        'id': 22,
+        'item_name': "Stamina Cookie",
         'item_type': "buff",
         'potency_multiplier': 1.4,
         'cooldown_ticks': 3,

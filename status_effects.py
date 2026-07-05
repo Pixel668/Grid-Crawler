@@ -18,7 +18,7 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
         effect = entity_object.active_debuff_list[i]
         
         # --- normalize the effect type ---
-        'name' key with title-case, new format uses 'type' with lowercase
+        # 'name' key with title-case, new format uses 'type' with lowercase
         raw_type = effect.get('type') or effect.get('name', '')
         effect_type = raw_type.lower()
         
@@ -36,13 +36,16 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
             effect['duration'] -= 1
             if effect['duration'] <= 0:
                 print(f"  [POISON] cleared from {entity_name}.")
-            entity_object.active_debuff_list.pop(i)        elif effect_type == 'burn':
+                entity_object.active_debuff_list.pop(i)
+                
+        elif effect_type == 'burn':
             dmg = effect['potency'] * 2
             if hasattr(entity_object, 'hp'):
                 entity_object.hp -= dmg
                 print(f"  [BURN] {entity_name} is BURNING! fire damage: {dmg}.")
             else:
-                entity_object.curren                print(f"  [BURN] {entity_name} is on fire. took {dmg} damage.")
+                entity_object.current_hp -= dmg
+                print(f"  [BURN] {entity_name} is on fire. took {dmg} damage.")
                 
             effect['duration'] -= 1
             if effect['duration'] <= 0:
@@ -70,7 +73,8 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
                     entity_object.current_hp -= shatter_dmg
                 entity_object.active_debuff_list.pop(i)
                 
-        elif effect_type ==             dmg = effect['potency'] * (4 - effect['duration'])
+        elif effect_type == 'bleed':
+            dmg = effect['potency'] * (4 - effect['duration'])
             if dmg < 1:
                 dmg = 1
             if hasattr(entity_object, 'hp'):
@@ -93,7 +97,8 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
                 print(f"  [WEAK] weakness cleared from {entity_name}.")
                 entity_object.active_debuff_list.pop(i)
                 
-        elif effect_type ==            dmg = 10
+        elif effect_type == 'rage':
+            dmg = 10
             if hasattr(entity_object, 'hp'):
                 entity_object.hp -= dmg
                 print(f"  [RAGE] {entity_name} is in a FURY! taking {dmg} self-damage but hitting harder.")
@@ -118,7 +123,7 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
                 else:
                     entity_object.current_hp = 0
                 entity_object.active_debuff_list.pop(i)
-            elif effect_type == 'defending':
+        elif effect_type == 'defending':
             # this is set by the Defend move. just a flag, doesn't do anything here.
             # the take_damage method reads is_defending directly.
             entity_object.active_debuff_list.pop(i)

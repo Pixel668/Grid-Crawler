@@ -26,9 +26,9 @@ SHOP_INVENTORY = {
     7: {"item_id": 7, "name": "Burn Ointment",             "buy_price": 50,  "sell_price": 20},
     8: {"item_id": 8, "name": "Freeze Thaw Kit",           "buy_price": 65,  "sell_price": 25},
     9: {"item_id": 9, "name": "Iron Will Tablet",          "buy_price": 80,  "sell_price": 35},
-       10: {"item_id": 10, "name": "Attack Boost Powder",      "buy_price": 90,  "sell_price": 40},
-11: {"item_id": 11, "name": "Defense Capsule",          "buy_price": 90,  "sell_price": 40},
-   12: {"item_id": 12, "name": "Escape Smoke",             "buy_price": 35,  "sell_price": 12},
+    10: {"item_id": 10, "name": "Attack Boost Powder",      "buy_price": 90,  "sell_price": 40},
+    11: {"item_id": 11, "name": "Defense Capsule",          "buy_price": 90,  "sell_price": 40},
+    12: {"item_id": 12, "name": "Escape Smoke",             "buy_price": 35,  "sell_price": 12},
 }
 
 def is_shop_zone(x, y):
@@ -92,8 +92,11 @@ def handle_shop_session(player, inventory_manager):
             cost = chosen["buy_price"]
             
             if player.gold < cost:
-                                print(f"u only have {player.gold}G. that costs {cost}G. not enough.")
-                cont            # try to add to inve            added = inventory_manager.add_item_to_bag(chosen["item_id"], chosen["name"])
+                print(f"u only have {player.gold}G. that costs {cost}G. not enough.")
+                continue
+            
+            # try to add to inventory
+            added = inventory_manager.add_item_to_bag(chosen["item_id"], chosen["name"])
             if added:
                 player.gold -= cost
                 print(f"bought {chosen['name']} for {cost}G. gold remaining: {player.gold}G")
@@ -109,15 +112,15 @@ def handle_shop_session(player, inventory_manager):
             try:
                 inv_slot = int(parts[1])
             except ValueError:
-             print("not a number.")
+                print("not a number.")
                 continue
             
             removed = inventory_manager.remove_item_from_bag(inv_slot)
             if removed:
                 # find sell price from shop inventory, or default to 10
                 sell_val = 10
-                                for s_item in SHOP_INVENTORY.values():
-                      if s_item["item_id"] == removed:
+                for s_item in SHOP_INVENTORY.values():
+                    if s_item["item_id"] == removed:
                         sell_val = s_item["sell_price"]
                         break
                 player.gold += sell_val

@@ -10,7 +10,9 @@ npc_encounter_map = {
             "I have occupied this meadow since the kernel was first compiled.",
             "Take heed, wanderer: the path north is a deceptive one. Many who seek",
             "glory at the edge find only an unforgiving termination by the Compiler Troll.",
-            "Steel your spirit within these meadows before you test the higher danger ratings.",        "hint": "ADVICE: The 'status' command will reveal your internal attributes. Monitor them closely."
+            "Steel your spirit within these meadows before you test the higher danger ratings.",
+        ],
+        "hint": "ADVICE: The 'status' command will reveal your internal attributes. Monitor them closely."
     },
         (0, 1): {
         "npc_name": "Kel, the Ethereal Merchant",

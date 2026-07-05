@@ -137,7 +137,8 @@ player_move_list = {
 
 # helper dictionary to map move names or keys back to their ID.
 move_name_to_id = {}
-for mid, mdata in player_move_list.items(    move_name_to_id[mdata["name"].lower()] = mid
+for mid, mdata in player_move_list.items():
+    move_name_to_id[mdata["name"].lower()] = mid
     move_name_to_id[mdata["key"].lower()] = mid
     
 # also map by number string because player might type "1" instead of move name

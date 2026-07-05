@@ -152,7 +152,7 @@ class PlayerState:
             elif self.level == 15:
                 self.max_hp += 25
                 self.base_attack += 5
-                self.next_level_xp            
+                self.next_level_xp = 30000
             elif self.level == 16:
                 self.max_hp += 20
                 self.base_attack += 4
@@ -207,7 +207,7 @@ class PlayerState:
                 self.next_level_xp = 1500000
             elif self.level == 29:
                 self.max_hp += 80
-                self.base_attack           
+                self.base_attack += 13
                 self.next_level_xp = 2000000
             elif self.level == 30:
                 self.max_hp += 300

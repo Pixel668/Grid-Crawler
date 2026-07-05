@@ -135,4 +135,4 @@ def print_zone_header(zone_name, danger_lvl):
     print(f"  LOCALE: {zone_name:<39} ")
     # manual spacing to ensure alignment in some terminals.
     print(f"  THREAT: {danger_bar:<10} ({danger_lvl}/10)                   ")
-    print(f"" + "" * 50 + 
+    print(f"" + "" * 50 + "")

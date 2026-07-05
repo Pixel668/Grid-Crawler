@@ -39,7 +39,8 @@ class Enemy:
                 "effect_chance": 0.0
          }
         
-        # enemies below 30% HP have a chance to use their last move (usually most powe        hp_ratio = self.current_hp / self.max_hp
+        # enemies below 30% HP have a chance to use their last move (usually most powerful)
+        hp_ratio = self.current_hp / self.max_hp
         if hp_ratio < 0.3 and len(self.move_pool) > 1:
             import random as r
             # 40% chance to spam their most dangerous move when desperate
@@ -123,7 +124,8 @@ _snake_moves = [
 
 _ogre_moves = [
     {"name": "Feature Add",     "desc": "Adds more weight to an already bloated attack.",                    "dmg_mult": 1.2,  "effect": "stun",    "effect_chance": 0.25},
-    {"name": "Scope Expansion", "desc": "A massive sweeping attack. Hits you from further away than expected.", "dmg_mult": 1.5,  "effect": None,      "effect_chance": 0.0    {"name": "Deadline Panic",  "desc": "Frenzied attacks from nowhere. Multiple hits.",                      "dmg_mult": 1.8,  "effect": "bleed",   "effect_chance": 0.30},
+    {"name": "Scope Expansion", "desc": "A massive sweeping attack. Hits you from further away than expected.", "dmg_mult": 1.5,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Deadline Panic",  "desc": "Frenzied attacks from nowhere. Multiple hits.",                      "dmg_mult": 1.8,  "effect": "bleed",   "effect_chance": 0.30},
     {"name": "Backlog Crush",   "desc": "Buries you under accumulated problems. Critical hit chance.",         "dmg_mult": 2.2,  "effect": "stun",    "effect_chance": 0.15},
 ]
 
@@ -220,7 +222,8 @@ _mammoth_moves = [
 
 _toad_moves = [
     {"name": "Payload Croak",   "desc": "Croaks malware directly into your face.",                         "dmg_mult": 0.9,  "effect": "poison",  "effect_chance": 0.50},
-    {"name": "Phishing Lunge",  "desc": "Pretends to be harmless, then stabs you.",                        "dmg_mult": 1.2,  "effect": None,      "effect_chance": 0.0    {"name": "Tongue Grab",     "desc": "Grabs and pulls you in. Bleed on impact.",                        "dmg_mult": 1.0,  "effect": "bleed",   "effect_chance": 0.30},
+    {"name": "Phishing Lunge",  "desc": "Pretends to be harmless, then stabs you.",                        "dmg_mult": 1.2,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Tongue Grab",     "desc": "Grabs and pulls you in. Bleed on impact.",                        "dmg_mult": 1.0,  "effect": "bleed",   "effect_chance": 0.30},
 ]
 
 _piranha_moves = [
@@ -344,12 +347,13 @@ def spawn_mob_by_id_and_level_scale(monster_id, scaling_factor):
         templ = enemy_templates[9]
     elif monster_id == 10:
         templ = enemy_templates[10]
-            elif monster_id =        templ = enemy_templates[11]
+    elif monster_id == 11:
+        templ = enemy_templates[11]
     elif monster_id == 12:
         templ = enemy_templates[12]
     elif monster_id == 13:
         templ = enemy_templates[13]
-            elif monster_id == 14:
+    elif monster_id == 14:
         templ = enemy_templates[14]
     elif monster_id == 15:
         templ = enemy_templates[15]
@@ -369,17 +373,18 @@ def spawn_mob_by_id_and_level_scale(monster_id, scaling_factor):
         templ = enemy_templates[22]
     elif monster_id == 23:
         templ = enemy_templates[23]
-            elif monster_id == 24:
+    elif monster_id == 24:
         templ = enemy_templates[24]
     elif monster_id == 25:
         templ = enemy_templates[25]
     elif monster_id == 26:
-        templ = enemy_templates[2    elif monster_id == 27:
+        templ = enemy_templates[26]
+    elif monster_id == 27:
         templ = enemy_templates[27]
     elif monster_id == 28:
         templ = enemy_templates[28]
     elif monster_id == 29:
-            templ = enemy_templates[29]
+        templ = enemy_templates[29]
     elif monster_id == 30:
         templ = enemy_templates[30]
     elif monster_id == 31:
@@ -389,7 +394,8 @@ def spawn_mob_by_id_and_level_scale(monster_id, scaling_factor):
     elif monster_id == 33:
         templ = enemy_templates[33]
     elif monster_id == 34:
-        templ = enemy_templates[3    elif monster_id == 35:
+        templ = enemy_templates[34]
+    elif monster_id == 35:
         templ = enemy_templates[35]
     else:
         # fallback monster
