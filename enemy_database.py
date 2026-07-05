@@ -219,4 +219,71 @@ _mammoth_moves = [
 ]
 
 _toad_moves = [
-    {"name": "Payload Croak",   "desc": "Croaks malware directly into your face.",          
+    {"name": "Payload Croak",   "desc": "Croaks malware directly into your face.",                         "dmg_mult": 0.9,  "effect": "poison",  "effect_chance": 0.50},
+    {"name": "Phishing Lunge",  "desc": "Pretends to be harmless, then stabs you.",                        "dmg_mult": 1.2,  "effect": None,      "effect_chance": 0.0    {"name": "Tongue Grab",     "desc": "Grabs and pulls you in. Bleed on impact.",                        "dmg_mult": 1.0,  "effect": "bleed",   "effect_chance": 0.30},
+]
+
+_piranha_moves = [
+    {"name": "Phishing Strike", "desc": "Looks like a normal attack. It isn't.",                          "dmg_mult": 1.0,  "effect": "bleed",   "effect_chance": 0.45},
+    {"name": "Mass Email",      "desc": "Attacks every part of you simultaneously.",                       "dmg_mult": 1.5,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Credential Bite", "desc": "Eats through your personal info. Critical hit chance.",            "dmg_mult": 1.8,  "effect": "bleed",   "effect_chance": 0.55},
+]
+
+_elephant_moves = [
+    {"name": "Encrypted Smash", "desc": "A hit you can't read coming. Hits harder than expected.",         "dmg_mult": 1.4,  "effect": "stun",    "effect_chance": 0.25},
+    {"name": "SSL Stomp",       "desc": "Leaves no trace. Very heavy.",                                    "dmg_mult": 1.7,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Key Exchange Slam", "desc": "Locks you out of your own defense.",                            "dmg_mult": 2.0,  "effect": "freeze",  "effect_chance": 0.30},
+    {"name": "Protocol Crush",  "desc": "Goes through all your layers. All of them.",                     "dmg_mult": 2.5,  "effect": "stun",    "effect_chance": 0.30},
+]
+
+_quantum_moves = [
+    {"name": "Superposition Hit", "desc": "Hits you from every angle simultaneously. Impossible to dodge.", "dmg_mult": 2.0,  "effect": "stun",    "effect_chance": 0.45},
+    {"name": "Observer Effect",  "desc": "The moment you look at it, it changes.",                         "dmg_mult": 1.5,  "effect": "freeze",  "effect_chance": 0.40},
+    {"name": "Quantum Entangle", "desc": "Links itself to you. Whatever hits you hits it too. But it heals on hits.", "dmg_mult": 1.8,  "effect": "bleed",  "effect_chance": 0.40},
+    {"name": "REALITY COLLAPSE", "desc": "THE QUANTUM GLITCH GOD REACHES INTO THE CODE ITSELF.",          "dmg_mult": 4.0,  "effect": "stun",    "effect_chance": 0.50},
+]
+
+_final_boss_moves = [
+    {"name": "Finality Strike", "desc": "An attack that feels like it was always inevitable.",              "dmg_mult": 2.5,  "effect": "bleed",   "effect_chance": 0.50},
+    {"name": "The Grid Speaks", "desc": "The entire map vibrates. Absolute magical damage.",               "dmg_mult": 3.0,  "effect": "stun",    "effect_chance": 0.40},
+    {"name": "Absolute Doom",   "desc": "The ultimate counter. Applies doom. You have 3 turns.",            "dmg_mult": 1.0,  "effect": "doom",    "effect_chance": 0.70},
+    {"name": "OVERRIDE",        "desc": "Writes directly to your HP. Sets it to whatever it wants.",       "dmg_mult": 5.0,  "effect": "stun",    "effect_chance": 0.60},
+]
+
+_intern_moves = [
+    {"name": "Confused Punch",  "desc": "Swings wildly. Probably doesn't know what it's doing.",           "dmg_mult": 0.6,  "effect": None,      "effect_chance": 0.0},
+    {"name": "Meeting Request", "desc": "Scheduled a meeting. You take psychic damage.",                   "dmg_mult": 0.5,  "effect": "stun",    "effect_chance": 0.20},
+    {"name": "Copy-Paste Bug",  "desc": "An attack copied from somewhere else. Causes bleed.",             "dmg_mult": 0.8,  "effect": "bleed",   "effect_chance": 0.25},
+]
+
+_minotaur_moves = [
+    {"name": "KPI Charge",      "desc": "Charges at you for missing a metric.",                            "dmg_mult": 1.5,  "effect": "stun",    "effect_chance": 0.40},
+    {"name": "Sprint Review",   "desc": "Reviews every mistake you've made. Deals burn damage.",           "dmg_mult": 1.2,  "effect": "burn",    "effect_chance": 0.35},
+    {"name": "Roadmap Crush",   "desc": "The 5-year plan falls on you. Very heavy.",                       "dmg_mult": 2.0,  "effect": None,      "effect_chance": 0.0},
+    {"name": "STAKEHOLDER RAGE", "desc": "Absolute fury. Nobody is safe.",                                 "dmg_mult": 3.0,  "effect": "bleed",   "effect_chance": 0.50},
+]
+
+_sentry_moves = [
+    {"name": "Code Review",     "desc": "Points out every flaw in your defense. Then hits them.",          "dmg_mult": 1.4,  "effect": None,      "effect_chance": 0.0},
+    {"name": "PR Reject",       "desc": "Rejects your block attempt. Devastating counter.",                "dmg_mult": 1.6,  "effect": "stun",    "effect_chance": 0.35},
+    {"name": "Architecture Slam", "desc": "Hits you with the weight of a poorly designed system.",         "dmg_mult": 2.0,  "effect": "bleed",   "effect_chance": 0.40},
+    {"name": "LGTM Strike",     "desc": "Ironically, this hits harder than anything else.",                "dmg_mult": 2.5,  "effect": "stun",    "effect_chance": 0.30},
+]
+
+_collapser_moves = [
+    {"name": "Existence Erase", "desc": "You feel yourself start to not exist.",                          "dmg_mult": 5.0,  "effect": "doom",    "effect_chance": 0.80},
+    {"name": "Total Annihilate", "desc": "Everything in your direction ceases to be.",                    "dmg_mult": 6.0,  "effect": "stun",    "effect_chance": 0.90},
+    {"name": "GRID COLLAPSE",   "desc": "THE REALITY COLLAPSER TEARS THROUGH THE GRID ITSELF.",           "dmg_mult": 9.9,  "effect": "doom",    "effect_chance": 0.99},
+]
+
+_missingno_moves = [
+    {"name": "???",             "desc": "Something happens. You're not sure what.",                        "dmg_mult": 1.0,  "effect": "stun",    "effect_chance": 0.30},
+    {"name": "Corrupted Data",  "desc": "An attack that shouldn't work. Does anyway.",                    "dmg_mult": 1.5,  "effect": "poison",  "effect_chance": 0.40},
+]
+
+# the main enemy templates dict. all i need is in here.
+enemy_templates = {
+    1:  {"name": "Gamer Goblin",              "hp": 20,    "dmg": 5,    "xp": 50,     "gold": 5,    "moves": _goblin_moves},
+    2:  {"name": "Small Spider",              "hp": 25,    "dmg": 8,    "xp": 75,     "gold": 8,    "moves": _spider_moves},
+    3:  {"name": "Compiler Troll",            "hp": 40,    "dmg": 12,   "xp": 120,    "gold": 12,   "moves": _troll_moves},
+    4:  {"name": "NullPointer 
