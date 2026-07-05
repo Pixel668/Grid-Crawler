@@ -70,4 +70,46 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
                     entity_object.current_hp -= shatter_dmg
                 entity_object.active_debuff_list.pop(i)
                 
-        elif effect_type ==             dmg = effect['potency'] * (4 
+        elif effect_type ==             dmg = effect['potency'] * (4 - effect['duration'])
+            if dmg < 1:
+                dmg = 1
+            if hasattr(entity_object, 'hp'):
+                entity_object.hp -= dmg
+                print(f"  [BLEED] {entity_name} is bleeding! damage: {dmg}.")
+            else:
+                entity_object.current_hp -= dmg
+                print(f"  [BLEED] {entity_name} is bleeding! took {dmg}.")
+                
+            effect['duration'] -= 1
+            if effect['duration'] <= 0:
+                print(f"  [BLEED] bleeding stopped on {entity_name}.")
+                entity_object.active_debuff_list.pop(i)
+                
+        elif effect_type == 'weakness':
+            print(f"  [WEAK] {entity_name} feels weak... confidence dropping.")
+            
+            effect['duration'] -= 1
+            if effect['duration'] <= 0:
+                print(f"  [WEAK] weakness cleared from {entity_name}.")
+                entity_object.active_debuff_list.pop(i)
+                
+        elif effect_type ==            dmg = 10
+            if hasattr(entity_object, 'hp'):
+                entity_object.hp -= dmg
+                print(f"  [RAGE] {entity_name} is in a FURY! taking {dmg} self-damage but hitting harder.")
+            else:
+                entity_object.current_hp -= dmg
+                print(f"  [RAGE] {entity_name} is raging.")
+                
+            effect['duration'] -= 1
+            if effect['duration'] <= 0:
+                print(f"  [RAGE] rage cooled down on {entity_name}.")
+                entity_object.active_debuff_list.pop(i)
+                
+        elif effect_type == 'doom':
+            # doom means u die when it hits zero. super scary.
+            print(f"  [DOOM] COUNTDOWN: {effect['duration']} turns left for {entity_name}!!!")
+            
+            effect['duration'] -= 1
+            if effect['duration'] <= 0:
+                
