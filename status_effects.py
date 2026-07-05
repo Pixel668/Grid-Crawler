@@ -112,4 +112,13 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
             
             effect['duration'] -= 1
             if effect['duration'] <= 0:
-                
+                print(f"  [DOOM] TIME IS UP!! {entity_name} IS DOOMED.")
+                if hasattr(entity_object, 'hp'):
+                    entity_object.hp = 0
+                else:
+                    entity_object.current_hp = 0
+                entity_object.active_debuff_list.pop(i)
+            elif effect_type == 'defending':
+            # this is set by the Defend move. just a flag, doesn't do anything here.
+            # the take_damage method reads is_defending directly.
+            
