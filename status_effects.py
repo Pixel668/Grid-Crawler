@@ -17,7 +17,7 @@ def apply_and_calculate_all_active_ticks_now(entity_object):
     for i in range(len(entity_object.active_debuff_list) - 1, -1, -1):
         effect = entity_object.active_debuff_list[i]
         
-        # --- normalize the effect type ---
+        # normalize the effect type 
         # 'name' key with title-case, new format uses 'type' with lowercase
         raw_type = effect.get('type') or effect.get('name', '')
         effect_type = raw_type.lower()

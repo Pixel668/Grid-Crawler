@@ -15,7 +15,7 @@ SHOP_ZONE_COORDS = [
     (4, 2),   # The Industrial Wasteland - Black Market
 ]
 
-# hardcoded prices for game balance.
+# prices for game balance.
 SHOP_INVENTORY = {
     1: {"item_id": 1, "name": "Minor Health Potion",      "buy_price": 25,  "sell_price": 10},
     2: {"item_id": 2, "name": "Health Potion",             "buy_price": 60,  "sell_price": 25},
